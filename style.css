@@ -1,0 +1,12 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    text-align: center; 
+    margin: 10% 0; 
+    min-height: 200px; 
+    background-color: rgba(155, 155, 155, .1); 
+    font-family: 'Open Sans', sans-serif;
+}
