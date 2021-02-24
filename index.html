@@ -5,19 +5,168 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn uploading a repository to GitHub</title>
-    <link href="./style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Owais Memon Self Introduction to world</title>
+    <style>
+        /*.experienceList {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .experienceList li {
+            flex-basis: 33%;
+            padding: 0 15px;
+        }*/
+
+        .experienceList li p span {
+            color: grey;
+        }
+
+        .experienceList li p em {
+            color: grey;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="box">
-        <h1>Hello world</h1>
-        <span>Learn uploading a repository to GitHub that contains index.html, style.css and script.js files.</span>
-        <p><button onclick="showCurrentDate()">Show current date & time</button></p>
-    </div>
-    <script type="text/javascript" src="./script.js"></script>
+    <!-- main start -->
+    <main style="width: 60%; margin: 0 auto;">
+
+        <!-- header start -->
+        <header style="display: flex;
+        justify-content: center;
+        text-align: left;">
+            <img src="./om-logo.jpg" width="100" height="100" alt="OM Logo">
+            <span style="padding-left: 15px;">
+                <h1 style="margin-bottom: 0;">Owais Memon</h1>
+                <p style="margin-top: 0;"><strong>Front End Developer</strong></p>
+            </span>
+        </header>
+        <!-- header end -->
+
+        <hr size="4" color="#000" />
+
+        <!-- about start -->
+        <article style="display: flex; flex-direction: row;">
+            <section style="text-align: left; padding:0 15px;">
+                <h2>About Me:</h2>
+                <p>I’m Owais Memon , I'm from a Karachi, Pakistan, Since 10 years I’m working as front end developer in
+                    different companies in Karachi. have developed many website's and Web App's. My interests are in
+                    Front End Engineering and I love to create beautiful performant products with delightful user
+                    experiences.</p>
+
+                <p>I was working in company named Qlik as an UI/Front end developer i was working on there Catalog and
+                    Hub Products, I worked on 3 itration of Catalog product in last 6 years, I designed and built a
+                    Catalog web application, Qlik Catalog is a modern enterprise data management solution that
+                    simplifies and speeds up how you catalog, manage, prepare, and deliver your trustworthy, actionable
+                    data to business users across your enterprise. It is built using a modern web technology
+                    stack - HTML, CSS, JavaScript, AngulerJs, Java, Hadoop etc and is mobile-responsive.</p>
+                <p>I want to be a Full stack develooper that why currently i am learning new technologies like React,
+                    MongoDB, Express, NodeJs opportunities to grow my skills are always of interest to me!</p>
+            </section>
+            <!-- aside start -->
+            <aside style="text-align: left; padding: 15px;">
+                <label for="HTML">HTML</label>
+                <progress id="HTML" value="90" min="0" max="100"></progress>
+                <br />
+                <label for="CSS">CSS</label>
+                <progress id="CSS" value="90" min="0" max="100"></progress>
+                <br />
+                <label for="jQuery">jQuery</label>
+                <progress id="jQuery" value="70" min="0" max="100"></progress>
+                <br />
+                <label for="JavaScript">JavaScript</label>
+                <progress id="JavaScript" value="70" min="0" max="100"></progress>
+                <br />
+                <label for="Bootstrap">Bootstrap</label>
+                <progress id="Bootstrap" value="80" min="0" max="100"></progress>
+                <br />
+                <label for="Wordpress">Wordpress</label>
+                <progress id="Wordpress" value="80" min="0" max="100"></progress>
+                <br />
+                <label for="React">React(Learning)</label>
+                <progress id="React" value="10" min="0" max="100"></progress>
+            </aside>
+            <!-- aside end -->
+        </article>
+        <!-- about end -->
+
+        <hr size="4" color="#000" />
+
+        <!-- experience start -->
+        <section style="text-align: left; padding:0 15px;">
+            <h2>Work Experience</h2>
+            <ul class="experienceList">
+                <li>
+                    <p>
+                        <span>2018 - 2020</span><br />
+                        <strong>Qlik</strong><br />
+                        <em>UI/Front End Developer</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2014 - 2018</span><br />
+                        <strong>Podium Data</strong><br />
+                        <em>UI/Front End Developer</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2014 - 2020</span><br />
+                        <strong>Creative Chaos</strong><br />
+                        <em>Sr. UI/Web Developer</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2012 - 2014</span><br />
+                        <strong>Creative Jin(A Symmetry Group Company)</strong><br />
+                        <em>Asst. Manager Development(Front End)</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2013 - 2014</span><br />
+                        <strong>Creative Jin(A Symmetry Group Company)</strong><br />
+                        <em>Asst Manager Development - Front End</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2012 - 2013</span><br />
+                        <strong>E2Z Solutions Pakistan</strong><br />
+                        <em>Web Designer/Front End Developer</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2010 - 2012</span><br />
+                        <strong>ZZ Technologies</strong><br />
+                        <em>Sr. HTML/CSS Developer</em>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span>2010 - 2010</span><br />
+                        <strong>Pakistani Clicks</strong><br />
+                        <em>Web Designer</em>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <!-- experience end -->
+
+        <hr size="4" color="#000" />
+
+        <!-- footer start -->
+        <footer style="text-align: center;">
+            <p>&copy; 2021 Owais Memon</p>
+        </footer>
+        <!-- footer start -->
+
+    </main>
+    <!-- main end -->
 </body>
 
 </html>
