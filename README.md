@@ -1,3 +1,3 @@
 # Stackademic Assignments
 
-Assignment 1 - Upload files to Github.
+Assignment 2 - Self Introduction in HTML.
