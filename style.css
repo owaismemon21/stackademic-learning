@@ -1,0 +1,49 @@
+body * {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+main {
+    width: 80%; 
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+header span {
+    padding-left: 15px;
+}
+header span h1 {
+    margin-bottom: 0;
+}
+header span p {
+    margin-top: 0;
+}
+
+
+article {
+    display: flex; 
+    flex-direction: row;
+}
+
+section, aside {
+    text-align: left; 
+    padding:0 15px;
+}
+.experienceList li p span {
+    color: grey;
+}
+.experienceList li p em {
+    color: grey;
+}
+
+footer {
+    text-align: center;
+}
