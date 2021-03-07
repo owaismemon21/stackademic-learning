@@ -1,0 +1,224 @@
+html, body {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    /*position: fixed;
+    top: 0;
+    left: 0;*/
+    width: 100%;
+    z-index: 9999;
+    padding: 30px 0;
+    color: #fff;
+    transition: all .7s;
+    background: #000;
+}
+header h1 {
+    padding: 0 10px;
+    margin: 0;
+}
+header h1 img {
+    height: 60px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+}
+
+
+.about-top {
+    width: 100%;
+    padding: 65px 0;
+    text-align: center;
+}
+.about-top h6 {
+    color: #565656;
+    font-family: "Manrope", Sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 69%;
+    margin: 0 auto 20px;
+}
+.about-top h4 {
+    font-family: "Quicksand", Sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+    width: 69%;
+    margin: 0 auto;
+}
+
+.about-bottom {
+    width: 100%;
+    padding: 65px 0;
+    display: flex;
+}
+
+.about-bottom .left-panel {
+    width: 50%;
+    display: inline-block;
+}
+.about-bottom .left-panel img {
+    width: 100%;
+}
+.about-bottom .right-panel {
+    width: 50%;
+    display: inline-block;
+    padding: 0 35px;
+}
+
+.about-bottom .right-panel h2 {
+    font-family: "Quicksand", Sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.about-bottom .right-panel p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.6em;
+    margin: 0;
+    color: #565656;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 30px;
+}
+
+
+.whatWeDo {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #EDEDED;
+}
+
+
+.whatWeDo-top {
+    width: 100%;
+    text-align: center;
+}
+.whatWeDo-top h6 {
+    color: #7A7A7A;
+    font-family: "Manrope", Sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.3em;
+}
+.whatWeDo-top h3 {
+    font-family: "Quicksand", Sans-serif;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+}
+
+.whatWeDo-bottom {
+    width: 100%;
+}
+.whatWeDo-bottom ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.whatWeDo-bottom ul li {
+    width: 25%;
+    padding: 15px;
+}
+.whatWeDo-bottom ul li i {
+    color: #CE4918;
+    font-size: 108px;
+    padding-bottom: 10px;
+}
+.whatWeDo-bottom ul li h6 {
+    color: #222222;
+    font-family: "Manrope", Sans-serif;
+    font-size: 22.5px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: -0.3px;
+    padding-bottom: 15px;
+}
+.whatWeDo-bottom ul li p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.6em;
+    line-height: inherit;
+    margin: 0;
+    color: #565656;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 30px;
+}
+
+
+.background-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.84;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.nextProject {
+    background-attachment: fixed;
+    background-color: #000000;
+    background-image: url(./images/architecture3-scaled-1.jpg);
+    background-position: center center;
+    background-size: cover;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 120px 0;
+    position: relative;
+}
+
+.nextProject .content {
+    width: 70%;
+    position: relative;
+}
+.nextProject .content h6 {
+    color: #DCDA56;
+    font-family: "Manrope", Sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.3em;
+}
+.nextProject .content h2 {
+    color: #FFFFFF;
+    font-family: "Manrope", Sans-serif;
+    font-weight: 700;
+    font-size: 54.5px;
+    line-height: 1.4em;
+    letter-spacing: -1px;
+}
+.nextProject .content p {
+    color: #BDBDBD;
+    font-size: 17px;
+    line-height: 1.65em;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
