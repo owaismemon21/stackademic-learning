@@ -10,6 +10,12 @@ h1, h2, h3, h4, h5, h6, p, span, ol, ul {
     padding: 0;
 }
 
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 
 header {
     /*position: fixed;
@@ -221,4 +227,109 @@ main {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
+}
+
+
+footer {
+    background-color: #ededed;
+    transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;
+    padding: 120px 0;
+}
+footer article {
+    display: flex;
+}
+footer section, footer aside {
+    width: 50%;
+}
+footer section {
+    padding: 0 60px 0 15px;
+}
+footer h6 {
+    color: #000;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: quicksand,Sans-serif;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+}
+footer h4 {
+    color: #000;
+    font-family: quicksand,Sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+}
+footer section p {
+    margin: 0;
+    color: #565656;
+    font-family: poppins,sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+footer aside p {
+    margin-bottom: 30px;
+}
+
+footer aside input, footer aside textarea {
+    width: 100%;
+    padding: 15px;
+    background: 0 0;
+    border: 1px solid #ddd;
+    font-family: poppins,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+footer aside textarea {
+    overflow: auto;
+    resize: none;
+    height: 100px;
+}
+
+footer aside button {
+    position: relative;
+    padding: 14px 35px;
+    overflow: hidden;
+    border: 2px solid #1e1e1e;
+    border-radius: 4px;
+    background: 0 0;
+    cursor: pointer;
+    background: #1e1e1e;
+    padding: 8px 35px;
+    color: #fff;
+    font-family: poppins,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+footer aside button span {
+    z-index: 2;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+}
+footer aside button:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    bottom: -10px;
+    left: -10px;
+    /*background: #1e1e1e;*/
+    -webkit-transition: all .6s cubic-bezier(.39,.58,.57,1);
+    transition: all .6s cubic-bezier(.39,.58,.57,1);
+    background: #fff;
+}
+footer aside button:hover:after {
+    right: -10px;
+}
+footer aside button:hover span {
+    color: #1e1e1e;
 }
