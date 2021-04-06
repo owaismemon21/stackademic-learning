@@ -1,3 +1,11 @@
+:root {
+    --whiteColor: rgba(255,255,255,1);;
+    --blackColor: rgba(0,0,0,1);
+    --darkGreyColor: rgba(30,30,30,1);;
+    --secondaryColor: #;
+}
+
+/* reset */
 * {
     box-sizing: border-box;
 }
@@ -6,11 +14,16 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
-h1, h2, h3, h4, h5, h6, p, span, ol, ul {
+p, a, ul, li {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    overflow-wrap: break-word;
 }
+li {
+    list-style-type: none;
+}
+
 
 button, input, optgroup, select, textarea {
     margin: 0;
@@ -19,6 +32,86 @@ button, input, optgroup, select, textarea {
     line-height: inherit;
 }
 
+/* base style */
+body {
+    background: var(--whiteColor);
+}
+.button {
+    position: relative;
+    padding: 14px 35px;
+    overflow: hidden;
+    border: 2px solid var(--darkGreyColor);
+    border-radius: 4px;
+    background: 0 0;
+    cursor: pointer;
+    background: var(--darkGreyColor);
+    padding: 8px 35px;
+    color: var(--whiteColor);
+    font-family: poppins,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 100%;
+    text-align: center;
+}
+.button span {
+    z-index: 2;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+}
+.button:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    bottom: -10px;
+    left: -10px;
+    /*background: #1e1e1e;*/
+    -webkit-transition: all .6s cubic-bezier(.39,.58,.57,1);
+    transition: all .6s cubic-bezier(.39,.58,.57,1);
+    background: var(--whiteColor);
+}
+.button:hover:after {
+    right: -10px;
+}
+.button:hover span {
+    color: var(--darkGreyColor);
+}
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background: 0 0;
+    border: 1px solid rgba(221,221,221,1);
+    font-family: poppins,sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+textarea {
+    overflow: auto;
+    resize: none;
+    height: 100px;
+}
+
+/* font */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+}
+h4 {
+    color: var(--blackColor);
+    font-family: quicksand,Sans-serif;
+    font-size: 2.19rem;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    overflow-wrap: break-word;
+}
+/* mobile style */
 header {
     width: 100%;
     z-index: 9999;
@@ -27,43 +120,49 @@ header {
     transition: all .7s;
     background: rgba(0,0,0,1);
     display: flex;
+    justify-content: center;
+}
+header .container {
+    display: flex;
     justify-content: space-between;
+    flex-direction:column;
 }
 header h1 {
+    text-align: center;
     padding: 0 10px;
     margin: 0;
 }
 header h1 img {
     height: 60px;
+    max-width: 100%;
 }
-header nav {
+nav {
     /*width: 100%;*/
+    padding: 0 20px;
 }
-header nav ul {
+nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     margin-top: 20px;
+    text-align: center;
 }
-header nav ul li {
+nav ul li {
     list-style-type: none;
-    padding: 5px 20px;
+    padding: 5px 12px;
 }
-header nav ul li a {
+nav ul li a {
     color: rgba(255,255,255,1);
     text-transform: uppercase;
     text-decoration: none;
     font-family: "Quicksand", Sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.3em;
     letter-spacing: -1px;
 }
-header nav ul li a:hover {
+nav ul li a:hover {
     color: rgba(244,113,24,1);
-}
-header .container {
-    display: flex;
-    justify-content: space-between;
 }
 
 .container {
@@ -77,62 +176,65 @@ main {
     margin: 0;
 }
 
-
-.about-top {
+.aboutTop {
     width: 100%;
-    padding: 65px 0;
+    padding: 65px 35px 0;
     text-align: center;
 }
-.about-top h6 {
+.aboutTop h6 {
     color: rgba(86,86,86,1);
     font-family: "Manrope", Sans-serif;
-    font-size: 11px;
+    font-size: 0.69rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    width: 69%;
-    margin: 0 auto 20px;
 }
-.about-top h4 {
+.aboutTop h4 {
     font-family: "Quicksand", Sans-serif;
-    font-size: 35px;
+    font-size: 2.19rem;
     font-weight: 700;
     line-height: 1.3em;
     letter-spacing: -1px;
-    width: 69%;
-    margin: 0 auto;
+    padding: 40px 0 0;
+    overflow-wrap: break-word;
 }
 
-.about-bottom {
+.aboutBottom {
     width: 100%;
     padding: 65px 0;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.about-bottom .left-panel {
-    width: 50%;
-    display: inline-block;
-}
-.about-bottom .left-panel img {
+.aboutBottom .leftPanel {
     width: 100%;
-}
-.about-bottom .right-panel {
-    width: 50%;
     display: inline-block;
-    padding: 0 35px;
+    width: 70%;
+    margin: 0 auto;
+}
+.aboutBottom .leftPanel img {
+    max-width: 100%;
+}
+.aboutBottom .rightPanel {
+    width: 100%;
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
 }
 
-.about-bottom .right-panel h2 {
+.aboutBottom .rightPanel h2 {
     font-family: "Quicksand", Sans-serif;
-    font-size: 35px;
+    font-size: 2.19rem;
     font-weight: 700;
     line-height: 1.3em;
     letter-spacing: -1px;
     padding-top: 60px;
     padding-bottom: 30px;
+    overflow-wrap: break-word;
 }
-.about-bottom .right-panel p {
-    font-size: 17px;
+.aboutBottom .rightPanel p {
+    font-size: 1.06rem;
     font-weight: 300;
     line-height: 1.6em;
     margin: 0;
@@ -141,7 +243,6 @@ main {
     padding-bottom: 30px;
 }
 
-
 .whatWeDo {
     width: 100%;
     padding: 50px 0;
@@ -149,57 +250,57 @@ main {
 }
 
 
-.whatWeDo-top {
+.whatWeDoTop {
     width: 100%;
     text-align: center;
 }
-.whatWeDo-top h6 {
+.whatWeDoTop h6 {
     color: rgba(122,122,122,1);
     font-family: "Manrope", Sans-serif;
-    font-size: 11px;
+    font-size: 0.69rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
     line-height: 1.3em;
 }
-.whatWeDo-top h3 {
+.whatWeDoTop h3 {
     font-family: "Quicksand", Sans-serif;
-    font-size: 43px;
+    font-size: 2.69rem;
     font-weight: 700;
     line-height: 1.3em;
     letter-spacing: -1px;
     margin-bottom: 40px;
 }
 
-.whatWeDo-bottom {
+.whatWeDoBottom {
     width: 100%;
 }
-.whatWeDo-bottom ul {
+.whatWeDoBottom ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    flex-direction: row;
+    flex-direction: column;
 }
-.whatWeDo-bottom ul li {
-    padding: 15px;
+.whatWeDoBottom ul li {
+    padding: 15px 20px;
     text-align: center;
 }
-.whatWeDo-bottom ul li i {
+.whatWeDoBottom ul li i {
     color: rgba(206,73,24,1);
-    font-size: 108px;
+    font-size: 4.75rem;
     padding-bottom: 10px;
 }
-.whatWeDo-bottom ul li h6 {
+.whatWeDoBottom ul li h6 {
     color: rgba(34,34,34,1);
     font-family: "Manrope", Sans-serif;
-    font-size: 22.5px;
+    font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.3em;
     letter-spacing: -0.3px;
     padding-bottom: 15px;
 }
-.whatWeDo-bottom ul li p {
-    font-size: 17px;
+.whatWeDoBottom ul li p {
+    font-size: 1.06rem;
     font-weight: 300;
     line-height: 1.6em;
     line-height: inherit;
@@ -210,7 +311,7 @@ main {
 }
 
 
-.background-overlay {
+.backgroundOverlay {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,1);
@@ -232,13 +333,15 @@ main {
 }
 
 .nextProject .content {
-    width: 70%;
+    width: 100%;
+    text-align: center;
     position: relative;
+    padding: 0 10px;
 }
 .nextProject .content h6 {
     color: rgba(220,218,86,1);
     font-family: "Manrope", Sans-serif;
-    font-size: 11px;
+    font-size: 0.69rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -248,13 +351,14 @@ main {
     color: rgba(255,255,255,1);
     font-family: "Manrope", Sans-serif;
     font-weight: 700;
-    font-size: 54.5px;
+    font-size: 3.41rem;
     line-height: 1.4em;
     letter-spacing: -1px;
+    overflow-wrap: break-word;
 }
 .nextProject .content p {
     color: rgba(189,189,189,1);
-    font-size: 17px;
+    font-size: 1.06rem;
     line-height: 1.65em;
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -269,17 +373,21 @@ footer {
 }
 footer article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 footer section, footer aside {
-    width: 50%;
+    width: 100%;
+    text-align: center;
 }
 footer section {
-    padding: 0 60px 0 15px;
+    padding: 0 20px;
+}
+footer aside {
+    padding: 70px 20px 0;
 }
 footer h6 {
     color: rgba(0,0,0,1);
-    font-size: 11px;
+    font-size: 0.69rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -290,17 +398,18 @@ footer h6 {
 footer h4 {
     color: rgba(0,0,0,1);
     font-family: quicksand,Sans-serif;
-    font-size: 35px;
+    font-size: 2.19rem;
     font-weight: 700;
     line-height: 1.3em;
     letter-spacing: -1px;
     margin-bottom: 30px;
+    overflow-wrap: break-word;
 }
 footer section p {
     margin: 0;
     color: rgba(86,86,86,1);
     font-family: poppins,sans-serif;
-    font-size: 15px;
+    font-size: 1.06rem;
     font-weight: 300;
     line-height: 1.8;
 }
@@ -309,96 +418,82 @@ footer aside p {
     margin-bottom: 30px;
 }
 
-footer aside input, footer aside textarea {
-    width: 100%;
-    padding: 15px;
-    background: 0 0;
-    border: 1px solid rgba(221,221,221,1);
-    font-family: poppins,sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-}
-footer aside textarea {
-    overflow: auto;
-    resize: none;
-    height: 100px;
-}
-
-footer aside button {
-    position: relative;
-    padding: 14px 35px;
-    overflow: hidden;
-    border: 2px solid rgba(30,30,30,1);
-    border-radius: 4px;
-    background: 0 0;
-    cursor: pointer;
-    background: rgba(30,30,30,1);
-    padding: 8px 35px;
-    color: rgba(255,255,255,1);
-    font-family: poppins,sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-}
-footer aside button span {
-    z-index: 2;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 13px;
-    letter-spacing: 2px;
-    -webkit-transition: all .1s;
-    transition: all .1s;
-}
-footer aside button:after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    right: 100%;
-    bottom: -10px;
-    left: -10px;
-    /*background: #1e1e1e;*/
-    -webkit-transition: all .6s cubic-bezier(.39,.58,.57,1);
-    transition: all .6s cubic-bezier(.39,.58,.57,1);
-    background: rgba(255,255,255,1);
-}
-footer aside button:hover:after {
-    right: -10px;
-}
-footer aside button:hover span {
-    color: rgba(30,30,30,1);
-}
-
-
-@media only screen and (max-width: 600px) {
-    header {
-        justify-content: center;
+/* small tablet styles */
+@media screen and (min-width: 333px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
     }
+    .button {
+        padding: 8px 35px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 420px) {
+    .button {
+        padding: 8px 35px;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: row;
+        text-align:left;
+    }
+}
+
+/* small tablet styles */
+@media screen and (min-width: 620px) {
     header .container {
-        flex-direction: column;
         justify-content: space-between;
+        flex-direction:row;
     }
-    header h1 {
-        text-align: center;
+    .aboutTop {
+        padding: 65px 200px 0;
     }
-    header nav ul {
-        justify-content: center;
+    .aboutBottom .leftPanel {
+        max-height: 600px;
+        overflow: hidden;
+        width: 70%;
+        margin: 0 auto;
     }
-    .whatWeDo-bottom ul {
-        flex-direction: column;
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px) {
+    body {
+        font-size: 18px;
     }
-    .nextProject .content {
-        width: 100%;
-        text-align: center;
-        padding: 0 20px;
+    .aboutBottom {
+        flex-direction: row;
+    }
+    .aboutBottom .leftPanel {
+        width:45%;
+        max-height: 700px;
+    }
+    .aboutBottom .rightPanel {
+        width:55%;
+    }
+    .whatWeDoBottom ul {
+        flex-direction: row;
     }
     footer article {
-        flex-direction: column;
-    }
-    footer section, footer aside {
-        width: 100%;
-        text-align: center;
-        padding: 0 20px;
+        flex-direction: row;
     }
     footer aside {
-        padding-top: 150px;
+        padding: 40px 20px 0;
+    }
+}
+
+/* dwsktop styles */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+    .aboutBottom .leftPanel {
+        width:50%;
+    }
+    .aboutBottom .rightPanel {
+        width:50%;
+        text-align: left;
     }
 }
